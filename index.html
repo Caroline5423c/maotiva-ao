@@ -3,75 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Letreiro Motivacional</title>
-  <style>
-    /* Definindo largura e altura da tela */
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;   /* Alinhamento horizontal */
-      align-items: center;       /* Alinhamento vertical */
-      height: 100vh;             /* Altura da tela */
-      width: 100vw;              /* Largura da tela */
-      background-color: #f0f0f0;
-    }
-
-    /* Espaço livre em torno do letreiro */
-    .container {
-      width: 80%;                /* largura da área do letreiro */
-      height: 100px;             /* altura da área do letreiro */
-      border: 2px solid #333;
-      overflow: hidden;          /* esconde texto fora da área */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #fff;
-      padding: 20px;             /* espaço livre em torno do letreiro */
-    }
-
-    .text {
-      position: relative;
-      font-size: 24px;
-      font-weight: bold;
-      color: #0077cc;
-      white-space: nowrap;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <div class="text" id="letreiro">🌟 Acredite em você e vá além! 🌟</div>
   </div>
 
-  <script>
-    const letreiro = document.getElementById("letreiro");
-    const container = document.querySelector(".container");
-
-    let pos = 0;                 // posição inicial
-    let direction = 1;           // 1 = direita, -1 = esquerda
-    const speed = 2;             // controle da velocidade (px por frame)
-
-    function animar() {
-      const maxPos = container.offsetWidth - letreiro.offsetWidth;
-
-      pos += direction * speed;
-
-      // inverter direção ao chegar nas extremidades
-      if (pos >= maxPos) {
-        direction = -1;
-      } else if (pos <= 0) {
-        direction = 1;
-      }
-
-      letreiro.style.left = pos + "px";
-      requestAnimationFrame(animar);
-    }
-
-    // inicializa posição
-    letreiro.style.position = "absolute";
-    letreiro.style.left = pos + "px";
-
-    animar();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
