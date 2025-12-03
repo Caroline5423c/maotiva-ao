@@ -1,0 +1,33 @@
+style.css
+/* Definindo largura e altura da tela */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;   /* Alinhamento horizontal */
+  align-items: center;       /* Alinhamento vertical */
+  height: 100vh;             /* Altura da tela */
+  width: 100vw;              /* Largura da tela */
+  background-color: #f0f0f0;
+}
+
+/* Espaço livre em torno do letreiro */
+.container {
+  width: 80%;                /* largura da área do letreiro */
+  height: 100px;             /* altura da área do letreiro */
+  border: 2px solid #333;
+  overflow: hidden;          /* esconde texto fora da área */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;             /* espaço livre em torno do letreiro */
+}
+
+.text {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077cc;
+  white-space: nowrap;
+}
